@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+}
+
+#Promo {
+  text-align: center;
+  padding: 40px;
+  background: url(../../assets/img/Banner2.0.png?h=34630170bef17e2bfcf3cd43888cfaa1) no-repeat;
+  background-size: cover;
+}
+
+#Willkommen {
+  text-align: center;
+  padding: 40px;
+  background: url(pixel-brille-thug-life-gangster.png) no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 576px) {
+  #Promo .jumbotron {
+    padding: 20px;
+  }
+}
+
+#logo {
+  max-height: 42px;
+  margin-right: -7px;
+  margin-top: -15px;
+}
+
+#Promo .jumbotron {
+  border-radius: 20px;
+  padding: 40px;
+  background-color: rgba(255,255,255,0.5);
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 29px;
+}
+
+@media (min-width: 576px) {
+  #Promo {
+    padding-bottom: 70px;
+  }
+}
+
+.site-sec {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.site-sec h1 {
+  font-weight: normal;
+  margin-bottom: 30px;
+  margin-top: 60px;
+}
+
+#Willkommen p {
+  max-width: 800px;
+  font-size: 20px;
+  margin: 0 auto;
+}
+
+#Willkom .item i {
+  padding-top: 3px;
+}
+
+#Willkom .item h2 {
+  font-size: medium;
+}
+
+.dark-section {
+  background-color: #fedd34;
+}
+
+.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active {
+  color: rgba(0,0,0,0.9);
+  background-color: rgb(237,237,133);
+  border-color: transparent;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  background-color: rgb(237,237,133);
+  border-color: transparent;
+}
+
