@@ -1,5 +1,4 @@
-window.onload = function(){
-  console.log("loaded");
+console.log("loaded");
 const canvas = document.getElementById('canvas');
 const c = canvas.getContext('2d');
 var x;
@@ -345,4 +344,4 @@ if(enemy.length > 1){
     enemy.length++;
     }   
 }
-}
+
