@@ -1,4 +1,4 @@
-console.log("neon");
+console.log("nn");
 const canvas = document.getElementById('canvas');
 const c = canvas.getContext('2d');
 var x;
