@@ -21,7 +21,7 @@ var count = 0;
 var healing_potion = new Image();
 healing_potion.src = "healing_potion.png"
 var riggler = new Image();
-riggler.src = "img/riggler.png";
+riggler.src = "Riggler.png";
 
 canvas.width = innerWidth - 4;
 canvas.height = innerHeight - 4;
