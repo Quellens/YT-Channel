@@ -16,10 +16,12 @@ var enterpressed = false;
 var shiftpressed = false;
 var count = 0;
 
+window.onload = ()=>{
 var healing_potion = new Image();
 healing_potion.src = "healing_potion.png"
 var riggler = new Image();
 riggler.src = "img/riggler.png";
+}
 
 canvas.width = innerWidth - 4;
 canvas.height = innerHeight - 4;
