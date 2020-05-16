@@ -18,7 +18,7 @@ var count = 0;
 var healing_potion = new Image();
 healing_potion.src = "healing_potion.png";
 var riggler = new Image();
-riggler.src = "img/riggler.png";
+riggler.src = "Riggler.png";
 
 canvas.width = innerWidth - 4;
 canvas.height = innerHeight - 4;
@@ -136,7 +136,7 @@ function drawPotion(){
 
 var rigglerx = canvas.width / 2;
 var rigglery = canvas.height / 2;
-function drawImage( image, x, y, w, h, degrees){
+function drawImageRiggler( image, x, y, w, h, degrees){
   c.save();
   c.translate(x+w/2, y+h/2);
   c.rotate(degrees*Math.PI/180.0);
@@ -293,22 +293,22 @@ if(x  > canvas.width)
 if(x < rigglerx+35 && y < rigglery+35){
 rigglerx -= Math.abs(dy/2.3);
 rigglery -= Math.abs(dy/2.3);
-drawImage( riggler, rigglerx, rigglery, 70, 70, Math.atan2(rigglery - y, rigglerx - x) * 180/ Math.PI);
+drawImageRiggler( riggler, rigglerx, rigglery, 70, 70, Math.atan2(rigglery - y, rigglerx - x) * 180/ Math.PI);
 }
 if(x > rigglerx+35 && y < rigglery+35){
 rigglerx += Math.abs(dy/2.3);
 rigglery -= Math.abs(dy/2.3);
-drawImage( riggler, rigglerx, rigglery, 70, 70, Math.atan2(rigglery - y, rigglerx - x) * 180/ Math.PI);
+drawImageRiggler( riggler, rigglerx, rigglery, 70, 70, Math.atan2(rigglery - y, rigglerx - x) * 180/ Math.PI);
 }   
 if(x > rigglerx+35 && y > rigglery+35){
 rigglerx += Math.abs(dy/2.3);
 rigglery += Math.abs(dy/2.3);
-drawImage( riggler, rigglerx, rigglery, 70, 70, Math.atan2(rigglery-y, x - rigglerx) * (180/ Math.PI) - 90 + 2*(-135 - Math.atan2(rigglery-y, x - rigglerx) * (180/ Math.PI) - 90));
+drawImageRiggler( riggler, rigglerx, rigglery, 70, 70, Math.atan2(rigglery-y, x - rigglerx) * (180/ Math.PI) - 90 + 2*(-135 - Math.atan2(rigglery-y, x - rigglerx) * (180/ Math.PI) - 90));
 } 
 if(x < rigglerx+35 && y > rigglery+35){
 rigglerx -= Math.abs(dy/2.3);
 rigglery += Math.abs(dy/2.3);
-drawImage( riggler, rigglerx, rigglery, 70, 70, Math.atan2(rigglery - y, rigglerx - x) * 180/ Math.PI);
+drawImageRiggler( riggler, rigglerx, rigglery, 70, 70, Math.atan2(rigglery - y, rigglerx - x) * 180/ Math.PI);
 } 
 }    
 
