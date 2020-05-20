@@ -27,7 +27,8 @@ backgroundMusic.src = "audio/Summer%20Vibes%20with%20D%C3%A4vid.mp3";
 backgroundMusic.loop = true;
 backgroundMusic.play();
 backgroundMusic.volume =0.5;
-
+var dead = new Audio();
+dead.src = "audio/dead"+ Math.floor(randomIntFromRange(0,14)) +".mp3";
 
 addEventListener('resize', () => {
   canvas.width = innerWidth - 4;
@@ -261,8 +262,6 @@ if(player.radius < 1){
     x = canvas.width / 2;
     y = canvas.height /2;
     player.radius = 10;
-    var dead = new Audio();
-    dead.src = "audio/dead"+ Math.floor(randomIntFromRange(0,14)) +".mp3";
     dead.play();
  gameoverscreen();
 }
