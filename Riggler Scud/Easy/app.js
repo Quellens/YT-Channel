@@ -28,7 +28,7 @@ backgroundMusic.loop = true;
 backgroundMusic.play();
 backgroundMusic.volume =0.5;
 var dead = new Audio();
-dead.src = "audio/dead"+ Math.floor(randomIntFromRange(0,14)) +".mp3";
+dead.src = "audio/dead"+ Math.round(randomIntFromRange(0,14)) +".mp3";
 
 addEventListener('resize', () => {
   canvas.width = innerWidth - 4;
