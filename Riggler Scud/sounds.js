@@ -43,21 +43,14 @@ elem4.addEventListener("mouseover", ()=>{
 var riggler = document.getElementById("riggler");
 riggler.volume= 0.5;
 
-var i=0;
+var bool = false;
 var mutebutton = document.getElementById("mute")
 mutebutton.addEventListener("click",()=>{
-    i++;
-    if(i%2 == 1){
+    if(bool){
     riggler.volume = 0;
     mutebutton.innerHTML = "Stummschaltung aufheben"; 
-    heftich.pause();
-    neutral.pause();
-    easy.pause();
-    controls.pause();
-    heftich.volume = 0;
-    neutral.volume = 0;
-    easy.volume =0;
-    controls.volume = 0;
+    heftich.pause(); neutral.pause(); easy.pause(); controls.pause();
+    heftich.volume = 0; neutral.volume = 0; easy.volume =0; controls.volume = 0;
     } else{
     riggler.volume = 0.5;
     mutebutton.innerHTML = "Stummschalten";
@@ -65,7 +58,6 @@ mutebutton.addEventListener("click",()=>{
     neutral.volume = 1;
     easy.volume =1;
     controls.volume = 1;
-    
     }
-   
+   bool = !bool;
 })
