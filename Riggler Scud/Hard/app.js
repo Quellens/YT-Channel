@@ -30,21 +30,8 @@ backgroundMusic.src = "audio/Astronomia%20with%20D%C3%A4vid.mp3";
 backgroundMusic.loop = true;
 backgroundMusic.play();
 backgroundMusic.volume = 0.6;
-var dead1 = new Audio(); dead1.src = "audio/dead1.mp3";
-var dead2 = new Audio(); dead2.src = "audio/dead2.mp3";
-var dead3 = new Audio(); dead3.src = "audio/dead3.mp3";
-var dead4 = new Audio(); dead4.src = "audio/dead4.mp3";
-var dead5 = new Audio(); dead5.src = "audio/dead5.mp3";
-var dead6 = new Audio(); dead6.src = "audio/dead6.mp3";
-var dead7 = new Audio(); dead7.src = "audio/dead7.mp3"; 
-var dead8 = new Audio(); dead8.src = "audio/dead8.mp3";
-var dead9 = new Audio(); dead9.src = "audio/dead9.mp3";
-var dead10 = new Audio(); dead10.src = "audio/dead10.mp3";
-var dead11 = new Audio(); dead11.src = "audio/dead11.mp3";
-var dead12 = new Audio(); dead12.src = "audio/dead12.mp3";
-var dead13 = new Audio(); dead13.src = "audio/dead13.mp3";
-var dead14 = new Audio(); dead14.src = "audio/dead14.mp3";
-var deadarr = [dead1,dead2,dead3,dead4,dead5,dead6,dead7,dead8,dead9,dead10,dead11,dead12,dead13,dead14];
+var dead = new Audio();
+dead.src = "audio/dead"+ Math.round(randomIntFromRange(0,14)) +".mp3";
 
 addEventListener('resize', () => {
   canvas.width = innerWidth - 4;
@@ -250,7 +237,7 @@ for(var l =0; l < blackEnemy.length; l++){
     blackEnemy[l].x += Math.cos(increment);
     blackEnemy[l].y += Math.sin(increment);  
     if( distance(x,y,blackEnemy[l].x,blackEnemy[l].y) - player.radius - 30 < 0){
-        deadarr[Math.round(Math.random() * 13)].play();
+        dead.play();
       gameoverscreen();   
     }
    
@@ -285,14 +272,14 @@ if(
    x - player.radius < 0 ||
    x + player.radius > canvas.width + 2 
   )
-{    deadarr[Math.round(Math.random() * 13)].play();
+{   dead.play();
     gameoverscreen()}
     
 if(player.radius < 1){
     x = - canvas.width;
     y = - canvas.height;
     player.radius = 10;
-     deadarr[Math.round(Math.random() * 13)].play();
+    dead.play();
     gameoverscreen();
 }
 if(x < rigglerx+35 && y < rigglery+35){
