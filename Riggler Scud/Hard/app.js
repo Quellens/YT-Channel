@@ -282,25 +282,25 @@ if(player.radius < 1){
     dead.play();
     gameoverscreen();
 }
-if(x < rigglerx+35 && y < rigglery+35){
-rigglerx -= Math.abs(dy/2);
-rigglery -= Math.abs(dy/2);
-drawImageRiggler( riggler, rigglerx, rigglery, 70, 70, Math.atan2(rigglery - y, rigglerx - x) * 180/ Math.PI);
+if(x < rigglerx+40 && y < rigglery+40){
+rigglerx -= Math.abs(dy/2.15);
+rigglery -= Math.abs(dy/2.15);
+drawImage( riggler, rigglerx, rigglery, 80, 80, Math.atan2(rigglery - y, rigglerx - x) * 180/ Math.PI);
 }
-if(x > rigglerx+35 && y < rigglery+35){
-rigglerx += Math.abs(dy/2);
-rigglery -= Math.abs(dy/2);
-drawImageRiggler( riggler, rigglerx, rigglery, 70, 70, Math.atan2(rigglery - y, rigglerx - x) * 180/ Math.PI);
+if(x > rigglerx+40 && y < rigglery+40){
+rigglerx += Math.abs(dy/2.15);
+rigglery -= Math.abs(dy/2.15);
+drawImage( riggler, rigglerx, rigglery, 80, 80, Math.atan2(rigglery - y, rigglerx - x) * 180/ Math.PI);
 }   
-if(x > rigglerx+35 && y > rigglery+35){
-rigglerx += Math.abs(dy/2);
-rigglery += Math.abs(dy/2);
-drawImageRiggler( riggler, rigglerx, rigglery, 70, 70, Math.atan2(rigglery-y, x - rigglerx) * (180/ Math.PI) - 90 + 2*(-135 - Math.atan2(rigglery-y, x - rigglerx) * (180/ Math.PI) - 90));
+if(x > rigglerx+40 && y > rigglery+40){
+rigglerx += Math.abs(dy/2.15);
+rigglery += Math.abs(dy/2.15);
+drawImage( riggler, rigglerx, rigglery, 80, 80, Math.atan2(rigglery-y, x - rigglerx) * (180/ Math.PI) - 90 + 2*(-135 - Math.atan2(rigglery-y, x - rigglerx) * (180/ Math.PI) - 90));
 } 
-if(x < rigglerx+35 && y > rigglery+35){
-rigglerx -= Math.abs(dy/2);
-rigglery += Math.abs(dy/2);
-drawImageRiggler( riggler, rigglerx, rigglery, 70, 70, Math.atan2(rigglery - y, rigglerx - x) * 180/ Math.PI);} 
+if(x < rigglerx+40 && y > rigglery+40){
+rigglerx -= Math.abs(dy/2.15);
+rigglery += Math.abs(dy/2.15);
+drawImage( riggler, rigglerx, rigglery, 80, 80, Math.atan2(rigglery - y, rigglerx - x) * 180/ Math.PI);} 
    
 }
 
