@@ -142,7 +142,7 @@ var enemy;
 
 function init(){
  var color = "white";
- player = new Player(color,20);
+ player = new Player(color,30);
  x = randomIntFromRange(player.radius,canvas.width - player.radius  * 3.5);
  y = randomIntFromRange(player.radius,canvas.height - player.radius * 3.5);
     
