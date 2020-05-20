@@ -4,7 +4,6 @@ var x;
 var y; 
 var dx = 1.75;
 var dy = 1.75;
-var increment = 0;
 var vlimit = 15;
 var state = true;
 var colors = ["#FFDC00","#FF851B", "#A61f0f", "#F7EE3D"];
