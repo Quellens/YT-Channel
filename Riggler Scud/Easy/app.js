@@ -322,7 +322,10 @@ if(enterpressed){
     if(load == 0)
     location.reload();
 }
-if(shiftpressed) window.open("https://quellens.github.io/YT-Channel/Riggler%20Scud/");
+if(shiftpressed){ 
+  shiftpressed = false;
+  window.open("https://quellens.github.io/YT-Channel/Riggler%20Scud/");
+  }
 backgroundMusic.pause();
   
 c.beginPath()
