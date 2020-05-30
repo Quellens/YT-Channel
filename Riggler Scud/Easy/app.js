@@ -324,7 +324,7 @@ if(enterpressed){
 }
 if(shiftpressed){ 
   shiftpressed = false;
-  window.href = "https://quellens.github.io/YT-Channel/Riggler%20Scud/";
+  window.location.href = "https://quellens.github.io/YT-Channel/Riggler%20Scud/";
   }
 backgroundMusic.pause();
   
