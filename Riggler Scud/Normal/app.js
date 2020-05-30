@@ -311,7 +311,10 @@ if(enterpressed){
     if(load == 0)
     location.reload();
 }
-if(shiftpressed)history.back();
+if(shiftpressed){ 
+  shiftpressed = false;
+  window.location.href = "https://quellens.github.io/YT-Channel/Riggler%20Scud/";
+  }
 backgroundMusic.pause();
 c.beginPath()
 c.fillStyle = "white"
