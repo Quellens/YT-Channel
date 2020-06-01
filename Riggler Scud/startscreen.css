@@ -12,6 +12,9 @@ h1{
     font-style: italic;
 }
 
+body{
+  overflow: hidden; 
+}
 
 .difficulty{
    font-size: 10vh;
