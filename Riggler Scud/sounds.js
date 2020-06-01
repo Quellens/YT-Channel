@@ -61,3 +61,10 @@ mutebutton.addEventListener("click",()=>{
     }
    bool = !bool;
 })
+
+var mobiledevice = ((typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1));
+if(mobiledevice){
+   elem4.style.visibility = "hidden";
+   document.querySelector("h1").style.fontSize = "50px";
+}
+
