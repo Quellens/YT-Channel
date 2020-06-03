@@ -1,18 +1,16 @@
 const canvas = document.getElementById('canvas');
 const c = canvas.getContext('2d');
-var x, y, dx, dy, vlimit, state, colors, backgroundcolors, rightpressed, leftpressed, enterpressed, shiftpressed, count;
-dx = 1.75;
-dy = 1.75;
-vlimit = 15;
-state = true;
-colors = ["#FFDC00","#FF851B", "#A61f0f", "#F7EE3D"];
-backgroundcolors = ["dimgray", "#2F3147", "#35AF23","#DDDDDD","#7FDCFF", "#82744b"]
+var x, y, 
+ dx= 1.75, 
+ dy = 1.75, 
+ vlimit = 15, 
+ state = true, 
+ colors = ["#FFDC00","#FF851B", "#A61f0f", "#F7EE3D"], 
+ backgroundcolors = ["dimgray", "#2F3147", "#35AF23","#DDDDDD","#7FDCFF", "#82744b"], 
+ rightpressed = false, leftpressed = false, enterpressed = false, shiftpressed = false, 
+ count = 0;
 document.body.style.backgroundColor = backgroundcolors[Math.floor(Math.random() * backgroundcolors.length)];
-rightpressed = false;
-leftpressed = false;
-enterpressed = false;
-shiftpressed = false;
-count = 0;
+
 var healing_potion = new Image();
 healing_potion.src = "healing_potion.png";
 var riggler = new Image();
