@@ -1,19 +1,18 @@
 const canvas = document.getElementById('canvas');
 const c = canvas.getContext('2d');
-var x;
-var y; 
-var dx = 1.75;
-var dy = 1.75;
-var vlimit = 15;
-var state = true;
-var colors = ["#FFDC00","#FF851B", "#A61f0f", "#F7EE3D"];
-var backgroundcolors = ["dimgray", "#2F3147", "#35AF23","#DDDDDD","#7FDCFF", "#82744b"]
+var x, y, dx, dy, vlimit, state, colors, backgroundcolors, rightpressed, leftpressed, enterpressed, shiftpressed, count;
+dx = 1.75;
+dy = 1.75;
+vlimit = 15;
+state = true;
+colors = ["#FFDC00","#FF851B", "#A61f0f", "#F7EE3D"];
+backgroundcolors = ["dimgray", "#2F3147", "#35AF23","#DDDDDD","#7FDCFF", "#82744b"]
 document.body.style.backgroundColor = backgroundcolors[Math.floor(Math.random() * backgroundcolors.length)];
-var rightpressed = false;
-var leftpressed = false;
-var enterpressed = false;
-var shiftpressed = false;
-var count = 0;
+rightpressed = false;
+leftpressed = false;
+enterpressed = false;
+shiftpressed = false;
+count = 0;
 var healing_potion = new Image();
 healing_potion.src = "healing_potion.png";
 var riggler = new Image();
@@ -137,9 +136,7 @@ function drawScore(){
     c.closePath();
 }
 
-var player;
-var enemy;
-
+var player, enemy;
 function init(){
  var color = "white";
  player = new Player(color,30);
