@@ -145,6 +145,7 @@ var potionx = randomIntFromRange(healing_potion.width,canvas.width - healing_pot
 var potiony = randomIntFromRange(healing_potion.height,canvas.height - healing_potion.height);
 function drawPotion(){
     c.beginPath()
+     mobiledevice ? c.drawImage(healing_potion,potionx,potiony, 90,90):
     c.drawImage(healing_potion,potionx,potiony)   
     c.closePath()
     if(!state){
