@@ -6,14 +6,8 @@ var dx = 2;
 var dy = 2;
 var backgroundcolors = ["#35AF23","#DDDDDD","#7FDCFF","#A61f0f","#F7EE3D"]
 canvas.style.backgroundColor = backgroundcolors[Math.floor(Math.random() * backgroundcolors.length)];
-var rightpressed = false;
-var leftpressed = false;
-var enterpressed = false;
-
-addEventListener('resize', () => {
-  init();
-})
-
+var rightpressed = false, leftpressed = false, enterpressed = false;
+var mobiledevice = ((typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1));
 function keyDownHandler(event){
 if (event.keyCode == 39 || event.keyCode == 68)
     rightpressed = true;
@@ -39,6 +33,7 @@ function randomIntFromRange(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
+
 class Player{
   constructor(color,radius){
      this.color = color;
@@ -58,7 +53,6 @@ class Player{
 }
 
 var player;
-function init(){
  var color = "white";
  player = new Player(color,15);
  x = randomIntFromRange(player.radius,canvas.width - player.radius  * 3.5);
@@ -74,7 +68,7 @@ if(x < canvas.width / 2 && y > canvas.height / 2){
 if(x > canvas.width / 2 && y < canvas.height / 2){
     dx = -dx;
 }
-}
+
 
 function animate(){
 c.clearRect(0,0,canvas.width,canvas.height);
@@ -98,10 +92,20 @@ if(y  > canvas.height || y  < 0)
 if( x  < 0 || x  > canvas.width)  
   dx = -dx;
 }
-
-init()
+if(!mobiledevice)
 animate()
 
+if(mobiledevice){
+    canvas.style.visibility = "hidden";
+    document.getElementById("links").innerHTML = "Swipe nach links";
+    document.getElementById("rechts").innerHTML = "und Swipe nach rechts um in die entsprechende Richtung zu gelangen";
+    document.getElementById("space").innerHTML = "Drücke den Knopf um hoch oder runter zu gehen";
+    Array.prototype.forEach.call(document.querySelectorAll("h1"), ele=> ele.style.fontSize = "50px");
+    document.querySelector("a").style.fontSize = "60px"
+    document.querySelector("a").style.position = "fixed";
+    document.querySelector("a").style.bottom = "0px";
+    document.querySelector("a").style.left = "0px";
+}
 
 var apachegoesskra = new Audio();
 apachegoesskra.src = "Apache%20goes%20Skraa..mp3"

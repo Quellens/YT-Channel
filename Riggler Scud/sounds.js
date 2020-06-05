@@ -64,7 +64,7 @@ mutebutton.addEventListener("click",()=>{
 
 var mobiledevice = ((typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1));
 if(mobiledevice){
-   elem4.style.visibility = "hidden";
+   elem4.style.fontSize = "30px";
    document.querySelector("h1").style.fontSize = "50px";
 }
 
