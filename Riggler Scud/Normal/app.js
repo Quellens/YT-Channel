@@ -14,9 +14,10 @@ var leftpressed = false;
 var enterpressed = false;
 var shiftpressed = false;
 var count = 0;
+var mobiledevice = ((typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1));
 
 var healing_potion = new Image();
-healing_potion.src = "healing_potion.png"
+healing_potion.src = "../healing_potion.png"
 var riggler = new Image();
 riggler.src = "Riggler.png";
 
@@ -57,7 +58,32 @@ function keyUpHandler(event){
     shiftpressed =false;
 }
 
+function touchmover(event){
+    var xtouch = event.touches[0].clientX;
+    var ytouch = event.touches[0].clientY;
+    if(xtouch < xstart){
+        rightpressed = false;
+        leftpressed = true;
+    } else if(xtouch > xstart){
+        rightpressed = true;
+        leftpressed = false;
+    }
+    else if(ytouch+200  > ystart){
+     shiftpressed = true;
+    }
+}
 
+var xstart = canvas.width / 2, ystart = canvas.height/ 2;
+function touchstarter(event){
+   xstart = event.touches[0].clientX; 
+   ystart = event.touches[0].clientY;  
+  if(xstart > 0 && xstart < 150 && ystart > canvas.height-150 /*&& ystart < canvas.heigth*/)  
+  enterpressed = true;  
+}
+
+
+document.addEventListener("touchstart",touchstarter,false);
+document.addEventListener("touchmove",touchmover,false);
 document.addEventListener('keydown',keyDownHandler,false);
 document.addEventListener('keyup', keyUpHandler,false);
 
@@ -107,6 +133,16 @@ class Enemy{
     }
     
     
+}
+
+function drawEnter(){
+  var enterimg = new Image();
+  enterimg.src = "../button.png";
+  c.save();
+  c.translate(150/2, canvas.height-100+150/2);
+  c.translate(-150/2, -canvas.height - 100-150/2);
+  c.drawImage(enterimg, 0, canvas.height+80, 150, 150);
+  c.restore();
 }
 
 var potionx = randomIntFromRange(healing_potion.width,canvas.width - healing_potion.width);
@@ -176,6 +212,8 @@ var adj = (canvas.width + canvas.height) / 1987;
 c.clearRect(0,0,canvas.width,canvas.height);
 requestAnimationFrame(animate);
 player.draw();
+if(mobiledevice)
+drawEnter();
 toColor("black");
 player.color = "white";
 drawPotion();
@@ -321,8 +359,11 @@ c.fillStyle = "white"
 c.fillRect(ovX,ovY,562 ,225)
 c.fill()
 c.fillStyle= "black"
+mobiledevice ? c.fillText("Dein Score: " +count ,canvas.width / 2 - 100 ,canvas.height / 2 -50):
 c.fillText("Du hast verloren. Dein Score: " +count ,canvas.width / 2 - 270,canvas.height / 2 -50)
+mobiledevice ? c.fillText("Weiterspielen: " + load +"x",canvas.width / 2 - 150,canvas.height / 2 + 10): 
 c.fillText("Drück "+ load +"x Space um zu spielen",canvas.width / 2 - 260,canvas.height / 2 + 10)
+mobiledevice ? c.fillText("Zum Menü: Swipen ⬆",canvas.width / 2 - 150,canvas.height / 2 + 70 ) :
 c.fillText("Drücke Shift um zurückzukehren",canvas.width / 2 - 285,canvas.height / 2 + 70 )
 c.fill()
 c.closePath()

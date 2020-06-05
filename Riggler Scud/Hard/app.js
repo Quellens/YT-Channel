@@ -19,7 +19,7 @@ var shiftpressed = false;
 var count = 0;
 
 var healing_potion = new Image();
-healing_potion.src = "healing_potion.png"
+healing_potion.src = "../healing_potion.png"
 var riggler = new Image();
 riggler.src = "Riggler.png";
 

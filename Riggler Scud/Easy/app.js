@@ -12,7 +12,7 @@ var x, y,
 document.body.style.backgroundColor = backgroundcolors[Math.floor(Math.random() * backgroundcolors.length)];
 
 var healing_potion = new Image();
-healing_potion.src = "healing_potion.png";
+healing_potion.src = "../healing_potion.png";
 var riggler = new Image();
 riggler.src = "Riggler.png";
 var mobiledevice = ((typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1));
@@ -72,7 +72,7 @@ var xstart = canvas.width / 2, ystart = canvas.height/ 2;
 function touchstarter(event){
    xstart = event.touches[0].clientX; 
    ystart = event.touches[0].clientY;  
-  if(xstart > 0 && xstart < 100 && ystart > canvas.height-100 /*&& ystart < canvas.heigth*/)  
+  if(xstart > 0 && xstart < 150 && ystart > canvas.height-150 /*&& ystart < canvas.heigth*/)  
   enterpressed = true;  
 }
 
@@ -84,11 +84,11 @@ document.addEventListener('keyup', keyUpHandler,false);
 
 function drawEnter(){
   var enterimg = new Image();
-  enterimg.src = "button.png";
+  enterimg.src = "../button.png";
   c.save();
-  c.translate(100/2, canvas.height-100+100/2);
-  c.translate(-100/2, -canvas.height - 100-100/2);
-  c.drawImage(enterimg, 0, canvas.height+100, 100, 100);
+  c.translate(150/2, canvas.height-100+150/2);
+  c.translate(-150/2, -canvas.height - 100-150/2);
+  c.drawImage(enterimg, 0, canvas.height+80, 150, 150);
   c.restore();
 }
 
