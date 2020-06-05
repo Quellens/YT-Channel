@@ -82,16 +82,6 @@ document.addEventListener("touchmove",touchmover,false);
 document.addEventListener('keydown',keyDownHandler,false);
 document.addEventListener('keyup', keyUpHandler,false);
 
-function drawEnter(){
-  var enterimg = new Image();
-  enterimg.src = "../button.png";
-  c.save();
-  c.translate(150/2, canvas.height-100+150/2);
-  c.translate(-150/2, -canvas.height - 100-150/2);
-  c.drawImage(enterimg, 0, canvas.height+80, 150, 150);
-  c.restore();
-}
-
 function randomIntFromRange(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min)
 }
@@ -138,6 +128,16 @@ class Enemy{
     }
     
     
+}
+
+function drawEnter(){
+  var enterimg = new Image();
+  enterimg.src = "../button.png";
+  c.save();
+  c.translate(150/2, canvas.height-100+150/2);
+  c.translate(-150/2, -canvas.height - 100-150/2);
+  c.drawImage(enterimg, 0, canvas.height+80, 150, 150);
+  c.restore();
 }
 
 var potionx = randomIntFromRange(healing_potion.width,canvas.width - healing_potion.width);
