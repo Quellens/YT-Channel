@@ -66,8 +66,8 @@ function touchmover(event){
         rightpressed = true;
         leftpressed = false;
     }
-    else if(ytouch+200  > ystart){
-     shiftpressed = true;
+    else if(ytouch+200  > ystart && state == false){
+     window.location.href = "https://quellens.github.io/YT-Channel/Riggler%20Scud/"
     }
 }
 
