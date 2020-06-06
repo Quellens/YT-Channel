@@ -23,12 +23,12 @@ riggler.src = "Riggler.png";
 canvas.width = innerWidth - 4;
 canvas.height = innerHeight - 4;
 var backgroundMusic = new Audio();
-backgroundMusic.src = "audio/Astronomia%20with%20D%C3%A4vid.mp3";
+backgroundMusic.src = "Astronomia%20with%20D%C3%A4vid.mp3";
 backgroundMusic.loop = true;
 backgroundMusic.play();
 backgroundMusic.volume = 0.6;
 var dead = new Audio();
-dead.src = "audio/dead"+ Math.round(randomIntFromRange(0,14)) +".mp3";
+dead.src = "../audio/dead"+ Math.round(randomIntFromRange(0,14)) +".mp3";
 
 addEventListener('resize', () => {
   canvas.width = innerWidth - 4;
