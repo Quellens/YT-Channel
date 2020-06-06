@@ -1,5 +1,5 @@
 var easy = new Audio();
-easy.src = "ja%20easy.mp3";
+easy.src = "au/ja%20easy.mp3";
 var elem1 = document.getElementById("easy")
 elem1.addEventListener("mouseover", ()=>{
     easy.play();
@@ -9,7 +9,7 @@ elem1.addEventListener("mouseover", ()=>{
 })
 
 var neutral = new Audio();
-neutral.src = "neutral.mp3";
+neutral.src = "au/neutral.mp3";
 var elem2 = document.getElementById("neutral")
 elem2.addEventListener("mouseover", ()=>{
     neutral.play();
@@ -19,7 +19,7 @@ elem2.addEventListener("mouseover", ()=>{
 })
 
 var heftich = new Audio();
-heftich.src = "heftig%20ey.mp3";
+heftich.src = "au/heftig%20ey.mp3";
 var elem3 = document.getElementById("heftich")
 elem3.addEventListener("mouseover", ()=>{
     heftich.play();
@@ -30,7 +30,7 @@ elem3.addEventListener("mouseover", ()=>{
 })
 
 var controls = new Audio();
-controls.src = "controls.mp3";
+controls.src = "au/controls.mp3";
 var elem4 = document.getElementById("controls")
 elem4.addEventListener("mouseover", ()=>{
     controls.play();
