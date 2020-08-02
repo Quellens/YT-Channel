@@ -8,9 +8,7 @@ With "Easy" you can go through the edges and get out on the opposite side.
 With the difficulty level "heftig" black holes are a danger in addition to the riggler, in which you die immediately. Plus the riggler has become fatter.
 Each difficulty level has its own music. Here you can find the music if you want to listen to it.
 
-Play my game on this webpage:
-https://quellens.github.io/YT-Channel/Riggler%20Scud/
+Play my game on this [webpage](https://quellens.github.io/YT-Channel/Riggler%20Scud/)
 
 My first website is a website for my YT-Channel. Every youtuber/streamer who I had cutted a video (Best Of) is listed. My YT-Channel is in german.
-See my first webite here: 
-https://quellens.github.io/YT-Channel/
+See my first webite [here](https://quellens.github.io/YT-Channel/)
