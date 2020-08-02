@@ -10,5 +10,5 @@ Each difficulty level has its own music. Here you can find the music if you want
 
 Play my game on this [webpage](https://quellens.github.io/YT-Channel/Riggler%20Scud/).
 
-My first website is a website for my YT-Channel. Every youtuber/streamer who I had cutted a video (Best Of) is listed. My YT-Channel is in german.
+My first website is a website for my YT-Channel. Every youtuber/streamer who I had cutted a video for (Best Of) are listed. My YT-Channel is in german.
 See my first webite [here](https://quellens.github.io/YT-Channel/).
